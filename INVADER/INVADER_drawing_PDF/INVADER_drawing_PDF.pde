@@ -11,7 +11,7 @@ void setup() {
   noLoop();
 
   int csvWidth=0;
-  String lines[] = loadStrings("INVADER_telemetry_selected.csv");
+  String lines[] = loadStrings("INVADER_telemetry.csv");
 
   //calculate max width of csv file
   for (int i=0; i < lines.length; i++) {
@@ -43,7 +43,7 @@ void draw() {
   for (int i = 0; i < LENGTH; i++) {
     x = 3508.0 * i / LENGTH;
     line(x, 0, x, Float.parseFloat(csv[i][15])*4);
-    line(x, 3508, x, 3508-(Float.parseFloat(csv[i][14])*4));
+    line(x, LENGTH, x, LENGTH-(Float.parseFloat(csv[i][14])*4));
     line(0, x, (Float.parseFloat(csv[i][9])+Float.parseFloat(csv[i][13]))*4, x);
     line(width, x, width-((Float.parseFloat(csv[i][8])+Float.parseFloat(csv[i][12]))*4), x);
   }
