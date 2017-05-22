@@ -7,7 +7,6 @@ float lat = 0.0;
 float lon = 0.0;
 float alt = 0.0;
 float val = 0.0;
-float lat0, lon0, alt0;
 
 void setup() {
   size(800, 800, P3D);
@@ -69,7 +68,7 @@ void draw() {
       y = width / 2500.0 * (alt+500) * sin(radians(lon)) * cos(radians(lat));
       z = width / 2500.0 * (alt+500) * sin(radians(lat));
 
-      stroke(map(val, -10, 20, 250, 0), 360, 360, 240); // color
+      stroke(map(val, -10, 20, 120, 0), 360, 360, 200); // color
       //stroke(0, 0, map(val, -10, 15, 0, 255), 120); // gray
       curveVertex(x, y, z);
     }

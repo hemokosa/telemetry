@@ -9,7 +9,6 @@ float lat = 0.0;
 float lon = 0.0;
 float alt = 0.0;
 float val = 0.0;
-float lat0, lon0, alt0;
 
 ArrayList history = new ArrayList();
 float distthresh = 200.0;
